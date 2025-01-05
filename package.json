@@ -1,0 +1,30 @@
+{
+  "name": "pop-game",
+  "version": "1.0.0",
+  "description": "A hybrid educational game to teach Python concepts, where the web app component will handle interactive quizzes and scoring, complementing a physical game component.",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "migrate": "cd src && npx sequelize-cli db:migrate",
+    "migrate:undo": "cd src && npx sequelize-cli db:migrate:undo",
+    "seed": "cd src && npx sequelize-cli db:seed:all && node utils/fixSequences.js",
+    "seed:undo": "cd src && npx sequelize-cli db:seed:undo:all"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "qrcode": "^1.5.4",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "sequelize-cli": "^6.6.2"
+  }
+}
